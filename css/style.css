@@ -779,83 +779,39 @@ h1, h2, h3, h4, h5,
   height: 40px;
   line-height: 40px; }
 
-/* // back-to-top-btn ------------------------------------------------------------------------------ */
-  #back-to-top-btn {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    font-size: 26px;
+  #button {
+    display: inline-block;
+    background-color: #FF9800;
     width: 50px;
     height: 50px;
-    background-color: #fff;
-    color: #333;
-    cursor: pointer;
-    outline: none;
-    border: 3px solid #333;
-    border-radius: 50%;
-    transition-duration: 0.2s;
-    transition-timing-function: ease-in-out;
-    transition-property: background-color, color;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s,
+      opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
   }
-  #back-to-top-btn:hover, #back-to-top-btn:focus {
-    background-color: #333;
+  #button::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
     color: #fff;
   }
-
-  /* Animations */
-.btnEntrance {
-  animation-duration: 0.5s;
-  animation-fill-mode: both;
-  animation-name: btnEntrance;
-}
-/* zoomIn */
-/* @keyframes btnEntrance {
-  from {
-    opacity: 0;
-    transform: scale3d(0.3, 0.3, 0.3);
+  #button:hover {
+    cursor: pointer;
+    background-color: #333;
   }
-  to {
+  #button:active {
+    background-color: #555;
+  }
+  #button.show {
     opacity: 1;
+    visibility: visible;
   }
-} */
-
-/* fadeInUp */
-@keyframes btnEntrance {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0);
-  }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-.btnExit {
-  animation-duration: 0.25s;
-  animation-fill-mode: both;
-  animation-name: btnExit;
-}
-/* zoomOut */
-/* @keyframes btnExit {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-    transform: scale3d(0.3, 0.3, 0.3);
-  }
-} */
-
-/* fadeOutDown */
-@keyframes btnExit {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0);
-  }
-}
-/* // back-to-top-btn ------------------------------------------------------------------------------ */
