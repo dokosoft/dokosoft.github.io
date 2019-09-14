@@ -779,6 +779,7 @@ h1, h2, h3, h4, h5,
   height: 40px;
   line-height: 40px; }
 
+/* Back to Top Button */
   #button {
     display: inline-block;
     background-color: #FF9800;
@@ -815,3 +816,4 @@ h1, h2, h3, h4, h5,
     opacity: 1;
     visibility: visible;
   }
+ /* Back to Top Button */
