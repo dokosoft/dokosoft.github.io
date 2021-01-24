@@ -780,7 +780,28 @@ h1, h2, h3, h4, h5,
   line-height: 40px; }
 
 /* Back to Top Button */
-  #button {
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+ /* 
+ #button {
     display: inline-block;
     background-color: #FF9800;
     width: 50px;
@@ -816,4 +837,5 @@ h1, h2, h3, h4, h5,
     opacity: 1;
     visibility: visible;
   }
+ */
  /* Back to Top Button */
